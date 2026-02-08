@@ -22,10 +22,15 @@
                 extend: {
                     colors: {
                         "primary": "#137fec",
+                        "shiporo-green": "#7DD958",
+                        "shiporo-blue": "#0055A6",
                         "background-light": "#f6f7f8",
                         "background-dark": "#101922",
                         "navy-900": "#0d141b",
                         "navy-700": "#4c739a",
+                    },
+                    backgroundImage: {
+                        'logo-gradient': "linear-gradient(135deg, #7DD958 0%, #0055A6 100%)",
                     },
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"]
@@ -111,7 +116,7 @@
                         1-800-SHIPORO
                     </a>
                     <a href="#quote-form"
-                        class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all text-center">
+                        class="bg-logo-gradient text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-shiporo-blue/20 hover:opacity-90 transition-all text-center">
                         Get Started
                     </a>
                 </div>
@@ -244,7 +249,7 @@
                                 placeholder="Tell us more about your needs..."></textarea>
                         </div>
                         <button
-                            class="w-full bg-primary text-white h-14 rounded-full font-extrabold text-lg mt-2 shadow-xl shadow-primary/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                            class="w-full bg-logo-gradient text-white h-14 rounded-full font-extrabold text-lg mt-2 shadow-xl shadow-shiporo-blue/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
                             type="submit">
                             Speak with an Expert
                         </button>
@@ -287,8 +292,13 @@
     <section class="py-24 max-w-7xl mx-auto px-6" id="benefits">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-3xl lg:text-4xl font-black mb-4">Everything You Need to Scale</h2>
-            <p class="text-navy-700 dark:text-gray-400">Stop worrying about warehouse space and shipping labels. Focus
+            <p class="text-navy-700 dark:text-gray-400 mb-8">Stop worrying about warehouse space and shipping labels.
+                Focus
                 on your brand while we handle the logistics.</p>
+            <a href="#quote-form"
+                class="inline-flex bg-logo-gradient text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-shiporo-blue/20 hover:scale-105 transition-all">
+                Let's Talk Fulfillment
+            </a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
@@ -331,23 +341,23 @@
                     <h2 class="text-3xl lg:text-4xl font-black mb-6">Simple 1-2-3 Fulfillment</h2>
                     <p class="text-gray-400 mb-8 leading-relaxed">Transitioning to a 3PL shouldn't be a headache. We've
                         streamlined the process to get you live in under 7 days.</p>
-                    <button
-                        class="bg-primary text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-primary/40 hover:scale-105 transition-all">
+                    <a href="#quote-form"
+                        class="inline-block bg-logo-gradient text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-shiporo-blue/40 hover:scale-105 transition-all text-center">
                         View Detailed Process
-                    </button>
+                    </a>
                 </div>
                 <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                     <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-gray-800 -z-0"></div>
                     <div class="relative z-10 flex flex-col gap-4">
                         <div
-                            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-primary/20">
+                            class="w-16 h-16 bg-logo-gradient text-white rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-shiporo-blue/20">
                             1</div>
                         <h4 class="text-xl font-bold">Connect</h4>
                         <p class="text-gray-400 text-sm">Sync your store with our proprietary WMS in just one click.</p>
                     </div>
                     <div class="relative z-10 flex flex-col gap-4">
                         <div
-                            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-primary/20">
+                            class="w-16 h-16 bg-logo-gradient text-white rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-shiporo-blue/20">
                             2</div>
                         <h4 class="text-xl font-bold">Ship</h4>
                         <p class="text-gray-400 text-sm">Send your inventory to our Montreal warehouse. We handle the
@@ -355,7 +365,7 @@
                     </div>
                     <div class="relative z-10 flex flex-col gap-4">
                         <div
-                            class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-primary/20">
+                            class="w-16 h-16 bg-logo-gradient text-white rounded-full flex items-center justify-center text-2xl font-black mb-2 shadow-xl shadow-shiporo-blue/20">
                             3</div>
                         <h4 class="text-xl font-bold">Scale</h4>
                         <p class="text-gray-400 text-sm">We pick, pack, and ship same-day while you focus on sales.</p>
@@ -475,7 +485,7 @@
     <!-- Final CTA -->
     <section class="py-24 max-w-7xl mx-auto px-6 mb-20">
         <div
-            class="bg-primary rounded-xl p-12 lg:p-20 text-white text-center flex flex-col items-center relative overflow-hidden">
+            class="bg-logo-gradient rounded-xl p-12 lg:p-20 text-white text-center flex flex-col items-center relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
             <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
             <h2 class="text-4xl lg:text-5xl font-black mb-6 relative z-10 leading-tight">Ready to Optimize Your
@@ -484,7 +494,7 @@
                 Shiporo. Get a customized fulfillment plan and pricing in minutes.</p>
             <div class="flex flex-col sm:flex-row gap-4 relative z-10">
                 <a href="#quote-form"
-                    class="bg-white text-primary px-10 py-4 rounded-full font-black text-lg hover:bg-navy-900 hover:text-white transition-all shadow-2xl text-center">
+                    class="bg-white text-shiporo-blue px-10 py-4 rounded-full font-black text-lg hover:bg-navy-900 hover:text-white transition-all shadow-2xl text-center">
                     Get My Free Quote
                 </a>
                 <a href="tel:1800SHIPORO"
@@ -579,7 +589,8 @@
                 track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
             }
 
-            setInterval(updateSlider, 5000);
+            setInterval(updateSlider, 2000);
+            updateSlider(); // Start right away
 
             // Reset on resize to avoid visual bugs
             window.addEventListener('resize', () => {
