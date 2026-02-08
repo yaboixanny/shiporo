@@ -56,6 +56,33 @@
         .fill-1 {
             font-variation-settings: 'FILL' 1;
         }
+
+        .logo-slider-track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo-slide {
+            flex: 0 0 33.333333%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 33.333333%;
+        }
+
+        @media (max-width: 768px) {
+            .logo-slide {
+                flex: 0 0 50%;
+                min-width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-slide {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -230,19 +257,29 @@
         </div>
     </section>
     <!-- Trust Bar -->
-    <div class="bg-white dark:bg-navy-900 py-10 border-y border-navy-700/5">
+    <div class="bg-white dark:bg-navy-900 py-10 border-y border-navy-700/5 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <h4 class="text-center text-navy-700 dark:text-gray-500 text-xs font-black uppercase tracking-[0.2em] mb-8">
+            <h4
+                class="text-center text-navy-700 dark:text-gray-500 text-xs font-black uppercase tracking-[0.2em] mb-12">
                 Integrated With All Major Platforms</h4>
-            <div
-                class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="logos/shopify-logo.webp" alt="Shopify" class="h-10 w-auto object-contain">
-                <img src="logos/woocommercelogo.webp" alt="WooCommerce" class="h-10 w-auto object-contain">
-                <img src="logos/big-commerce.webp" alt="BigCommerce" class="h-10 w-auto object-contain">
-                <img src="logos/fedex-logo.svg" alt="FedEx" class="h-10 w-auto object-contain">
-                <img src="logos/dhl-logo.svg" alt="DHL" class="h-10 w-auto object-contain">
-                <img src="logos/canadapost.png" alt="Canada Post" class="h-10 w-auto object-contain">
-                <img src="logos/united_states_postal_service-logo.svg" alt="USPS" class="h-10 w-auto object-contain">
+            <div class="relative max-w-4xl mx-auto">
+                <div id="logo-slider-track"
+                    class="logo-slider-track opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="logo-slide"><img src="logos/shopify-logo.webp" alt="Shopify"
+                            class="h-10 w-auto object-contain"></div>
+                    <div class="logo-slide"><img src="logos/woocommercelogo.webp" alt="WooCommerce"
+                            class="h-10 w-auto object-contain"></div>
+                    <div class="logo-slide"><img src="logos/big-commerce.webp" alt="BigCommerce"
+                            class="h-10 w-auto object-contain"></div>
+                    <div class="logo-slide"><img src="logos/fedex-logo.svg" alt="FedEx"
+                            class="h-10 w-auto object-contain"></div>
+                    <div class="logo-slide"><img src="logos/dhl-logo.svg" alt="DHL" class="h-10 w-auto object-contain">
+                    </div>
+                    <div class="logo-slide"><img src="logos/canadapost.png" alt="Canada Post"
+                            class="h-10 w-auto object-contain"></div>
+                    <div class="logo-slide"><img src="logos/united_states_postal_service-logo.svg" alt="USPS"
+                            class="h-10 w-auto object-contain"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -518,6 +555,39 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('logo-slider-track');
+            const slides = Array.from(track.children);
+            let currentIndex = 0;
+
+            function updateSlider() {
+                const isMobile = window.innerWidth <= 480;
+                const isTablet = window.innerWidth <= 768 && window.innerWidth > 480;
+
+                let visibleSlides = 3;
+                if (isMobile) visibleSlides = 1;
+                else if (isTablet) visibleSlides = 2;
+
+                currentIndex++;
+
+                if (currentIndex > slides.length - visibleSlides) {
+                    currentIndex = 0;
+                }
+
+                const slideWidth = 100 / visibleSlides;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            }
+
+            setInterval(updateSlider, 5000);
+
+            // Reset on resize to avoid visual bugs
+            window.addEventListener('resize', () => {
+                currentIndex = 0;
+                track.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
 </body>
 
 </html>
