@@ -65,24 +65,26 @@
                     </svg>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-8">
-                <nav class="flex gap-6">
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#benefits">Benefits</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#how-it-works">How it
-                        Works</a>
-                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#montreal">Montreal
-                        Advantage</a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <a class="text-sm font-bold flex items-center gap-2" href="tel:1-438-880-5283">
-                        <span class="material-symbols-outlined text-primary text-xl">call</span>
-                        (438) 880-5283
-                    </a>
-                    <button
-                        class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
-                        Get Started
-                    </button>
+            <div class="flex items-center gap-4">
+                <a class="text-sm font-bold flex items-center gap-2" href="tel:1-438-880-5283">
+                    <span class="material-symbols-outlined text-primary text-xl">call</span>
+                    <span class="hidden sm:inline">(438) 880-5283</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <nav class="flex gap-6">
+                        <a class="text-sm font-semibold hover:text-primary transition-colors"
+                            href="#benefits">Benefits</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#how-it-works">How
+                            it
+                            Works</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#montreal">Montreal
+                            Advantage</a>
+                    </nav>
                 </div>
+                <button
+                    class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                    Get Started
+                </button>
             </div>
         </div>
     </header>
@@ -102,10 +104,14 @@
                 <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-navy-900 dark:text-white">
                     The Fulfillment Partner That <span class="text-primary">Grows With You</span>
                 </h1>
-                <p class="text-lg text-navy-700 dark:text-gray-400 max-w-lg leading-relaxed">
+                <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
                     Optimize your supply chain with Montreal's leading 3PL. Same-day shipping, seamless integrations,
                     and scalable growth for your e-commerce brand. Reach 40M+ consumers in 24 hours.
                 </p>
+                <a href="#quote-form"
+                    class="md:hidden bg-logo-gradient text-white px-8 py-4 rounded-full font-bold text-center shadow-lg shadow-shiporo-blue/20">
+                    Get Free 3PL Quote
+                </a>
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
@@ -122,7 +128,7 @@
                 </div>
             </div>
             <!-- Lead Gen Card -->
-            <div class="relative">
+            <div class="relative" id="quote-form">
                 <div class="absolute inset-0 bg-primary/5 rounded-xl -rotate-2 scale-105 -z-10"></div>
                 <div class="bg-white dark:bg-navy-900 p-8 rounded-xl shadow-2xl border border-navy-700/5">
                     <h3 class="text-2xl font-extrabold mb-2">Get a Custom Quote</h3>
@@ -188,13 +194,13 @@
                 </div>
                 <div class="w-32 h-10 bg-center bg-no-repeat bg-contain"
                     data-alt="Amazon seller central integration logo"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3OCng1W6NIsPcDM0pHlGq6Z3SdydbmOmHdwvlmr0eXyac2P1Zny5E9yxwanly5PIml4E0F-Yx9zmY_gaCuOrA4Zf4ZZt7LPuvjTR_1Be1vxfGqgfRqFZby_5LBUnA6EJqC1GNpnIwNXeE0BzvoYodsl2O-f3-QhMUHhBpNfIIbH17Do2v4HMfH5yC0DW8jf8FVVXUZ9WiJLj0wHb97ETo9p4hOLJG2Uh6NQtSwk2VjBkvdMb40E8CsOhhnCk18KwNx0eAckFAuKmd");'>
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3OCng1W6NIsPcDM0pHlGq6Z3SdydbmOmHdwvlmr0eXyac2P1Zny5E9yxwanly5PIml4E0F-Yx9zmY_gaCuOrA4Zf4ZZt7LPuvjTR_1Be1vxfGqgfRqFZby_5LBUnA6EJqC1GNpnIwNXE0BzvoYodsl2O-f3-QhMUHhBpNfIIbH17Do2v4HMH5yC0DW8jf8FVVXUZ9WiJLj0wHb97ETo9p4hOLJG2Uh6NQtSwk2VjBkvdMb40E8CsOhhnCk18KwNx0eAckFAuKmd");'>
                 </div>
                 <div class="w-32 h-10 bg-center bg-no-repeat bg-contain" data-alt="Magento platform integration logo"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDztHmTL2FP29hEraGYwqBmt8DAqMoUtFjC2eq-0HEwGB5p61Oy5Zf0VnbLZZR5CB8yTfZtaRK-vTJLEbNwwSb3xA_TGQsRfa5mcrtUIYMGNnzFRy6oXw6DUN0Sfwdy3JFFbL0BFsN0i55JHIzCD5oUzE407XSeGAT8sm47bkNIPDjlDY6Vh2ZqsPCh7B6riMcaAhGYFsftBgaBlZlRjVY3gakyY2eS1G9l8LxqK48k7vhitSZSChh2qvp8rICozW8JuEw0mGvQrKd8");'>
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDztHmTL2FP29hEraGYwqBmt8DAqMoUtFjC2eq-0HEwGB5p61Oy5Zf0VnbLZZR5CB8yTfZtaRK-vTJLEbNwwSb3xA_TGQsRfa5mcrtUIYMGNnzFRy6oXw6DUN0Sfwdy3JFFbL0BFsN0i55JHIzCD5oUzE407XSeGAT8sm47bkNIPDjlDY6Vh2ZqsPCh7B6riMcaAhGYFsftBgaBlZlRjVY3gakyY2eS1G9l8LxqK48k7vhitSZSChh2qvp8rICozW8JuEw0mGvQrKd9");'>
                 </div>
                 <div class="w-32 h-10 bg-center bg-no-repeat bg-contain" data-alt="Walmart marketplace integration logo"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBG8SJP9qXtJrA49qTT8nqeqyX10OpXtuvDHdq2vY8RIkmhiBRk0qpBQRyzaMIJSKsZf7MIqiX1qo-blHr220evKKqLhJxfG_XvWJknF7IchINqfWbn12kzdE4nmreTANSFTnd-H5O-YBqP4_Gir3B-2rEMa_rzpzurLczpiZEtGf_q-Z5L3S7pHx4R62CO0M_nqNp3eHieOiSmj24xN9ssBe0_Aq4ASQQYejExv6zLC41ov0GhmJbQavlwm8kZ3Kwhog37C3RTkO9_");'>
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBG8SJP9qXtJrA49qTT8nqeqyX10OpXtuvDHdq2vY8RIkmhiBRk0qpBQRyzaMIJSKsZf7MIqiX1qo-blHr220evKKqLhJxfG_XvWJknF7IchINqfWbn12kzdE4nmreTANSFTnd-H5O-YBqP4_Gir3B-2rEMa_rzpzurLczpiZEtGf_q-Z5L3P7pHx4R62CO0M_nqNp3eHieOiSmj24xN9ssBe0_Aq4ASQQYejExv6zLC41ov0GhmJbQavlwm8kZ3Kwhog37C3RTkO9_");'>
                 </div>
             </div>
         </div>
@@ -401,94 +407,102 @@
     <section class="py-24 bg-background-light dark:bg-navy-900/10" id="faq">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-black text-center mb-16">Frequently Asked Questions</h2>
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4">
                 <!-- FAQ Item 1 -->
-                <div class="bg-white dark:bg-navy-900 p-8 rounded-xl border border-navy-700/5 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">How quickly can we start using Shiporo’s Montreal fulfillment
-                        center?</h3>
-                    <p class="text-navy-700 dark:text-gray-400 leading-relaxed">Our onboarding typically takes just a
-                        couple of days. We’ll integrate your eCommerce store swiftly, arrange inventory transfers, and
-                        have you shipping orders quickly, all without setup fees.</p>
-                </div>
+                <details
+                    class="group bg-white dark:bg-navy-900 rounded-xl border border-navy-700/5 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-lg group-open:bg-primary/5 transition-colors">
+                        <span>How quickly can we start using Shiporo’s Montreal fulfillment center?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-navy-700 dark:text-gray-400 leading-relaxed border-t border-navy-700/5">
+                        Our onboarding typically takes just a couple of days. We’ll integrate your eCommerce store
+                        swiftly, arrange inventory transfers, and have you shipping orders quickly, all without setup
+                        fees.
+                    </div>
+                </details>
                 <!-- FAQ Item 2 -->
-                <div class="bg-white dark:bg-navy-900 p-8 rounded-xl border border-navy-700/5 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">Which shipping regions are serviced by Shiporo’s Montreal
-                        facility?</h3>
-                    <p class="text-navy-700 dark:text-gray-400 leading-relaxed">We cover all of Canada, the U.S., and
-                        international destinations. Our strategic location allows efficient and cost-effective
-                        deliveries, even across borders.</p>
-                </div>
+                <details
+                    class="group bg-white dark:bg-navy-900 rounded-xl border border-navy-700/5 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-lg group-open:bg-primary/5 transition-colors">
+                        <span>Which shipping regions are serviced by Shiporo’s Montreal facility?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-navy-700 dark:text-gray-400 leading-relaxed border-t border-navy-700/5">
+                        We cover all of Canada, the U.S., and international destinations. Our strategic location allows
+                        efficient and cost-effective deliveries, even across borders.
+                    </div>
+                </details>
                 <!-- FAQ Item 3 -->
-                <div class="bg-white dark:bg-navy-900 p-8 rounded-xl border border-navy-700/5 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">What eCommerce platforms integrate with Shiporo’s system?</h3>
-                    <p class="text-navy-700 dark:text-gray-400 leading-relaxed">Shiporo offers integrations with major
-                        platforms including Shopify, WooCommerce, BigCommerce, and many others. Our user-friendly
-                        dashboard syncs automatically, making your fulfillment process seamless and efficient.</p>
-                </div>
+                <details
+                    class="group bg-white dark:bg-navy-900 rounded-xl border border-navy-700/5 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-lg group-open:bg-primary/5 transition-colors">
+                        <span>What eCommerce platforms integrate with Shiporo’s system?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-navy-700 dark:text-gray-400 leading-relaxed border-t border-navy-700/5">
+                        Shiporo offers integrations with major platforms including Shopify, WooCommerce, BigCommerce,
+                        and many others. Our user-friendly dashboard syncs automatically, making your fulfillment
+                        process seamless and efficient.
+                    </div>
+                </details>
                 <!-- FAQ Item 4 -->
-                <div class="bg-white dark:bg-navy-900 p-8 rounded-xl border border-navy-700/5 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4">Is there a minimum monthly order requirement?</h3>
-                    <p class="text-navy-700 dark:text-gray-400 leading-relaxed">No, Shiporo does not require minimum
-                        monthly orders. Our flexible approach accommodates businesses of all sizes, ensuring you only
-                        pay for the services you use and allowing you to scale at your own pace.</p>
-                </div>
+                <details
+                    class="group bg-white dark:bg-navy-900 rounded-xl border border-navy-700/5 shadow-sm overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-lg group-open:bg-primary/5 transition-colors">
+                        <span>Is there a minimum monthly order requirement?</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-navy-700 dark:text-gray-400 leading-relaxed border-t border-navy-700/5">
+                        No, Shiporo does not require minimum monthly orders. Our flexible approach accommodates
+                        businesses of all sizes, ensuring you only pay for the services you use and allowing you to
+                        scale at your own pace.
+                    </div>
+                </details>
+            </div>
+            <div class="mt-16 flex justify-center">
+                <a href="#quote-form"
+                    class="bg-logo-gradient text-white px-10 py-4 rounded-full font-extrabold text-lg shadow-xl shadow-shiporo-blue/20 hover:scale-105 transition-all text-center">
+                    Get Started With Shiporo
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-white dark:bg-navy-900 py-16 border-t border-navy-700/5">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="flex flex-col gap-6 col-span-1 md:col-span-1">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="flex flex-col gap-6">
                 <div class="flex items-center gap-3">
                     <div class="bg-primary p-2 rounded-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path clip-rule="evenodd"
-                                d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
-                                fill="currentColor" fill-rule="evenodd"></path>
-                        </svg>
+                        <img src="shiprologo.webp" alt="Shiporo Logo" class="h-10 w-auto object-contain">
                     </div>
-                    <h2 class="text-xl font-bold tracking-tight">Shiporo</h2>
                 </div>
-                <p class="text-navy-700 dark:text-gray-400 text-sm leading-relaxed">The fulfillment partner that grows
-                    with you. Specializing in high-growth e-commerce brands in North America.</p>
-                <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-full bg-navy-700/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-                        href="#"><span class="material-symbols-outlined text-sm">share</span></a>
-                    <a class="w-10 h-10 rounded-full bg-navy-700/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-                        href="#"><span class="material-symbols-outlined text-sm">link</span></a>
-                    <a class="w-10 h-10 rounded-full bg-navy-700/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
-                        href="#"><span class="material-symbols-outlined text-sm">public</span></a>
-                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-sm">The fulfillment partner that grows with
+                    you. Specializing in high-growth e-commerce brands in North America.</p>
             </div>
             <div>
-                <h5 class="font-bold mb-6 uppercase text-xs tracking-widest opacity-60">Services</h5>
+                <h5 class="font-bold mb-6 uppercase text-xs tracking-widest opacity-60">Contact Us</h5>
                 <ul class="flex flex-col gap-4 text-sm font-medium">
-                    <li><a class="hover:text-primary transition-colors" href="#">Order Fulfillment</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Warehouse Storage</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Inventory Syncing</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Returns Management</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6 uppercase text-xs tracking-widest opacity-60">Company</h5>
-                <ul class="flex flex-col gap-4 text-sm font-medium">
-                    <li><a class="hover:text-primary transition-colors" href="#">About Shiporo</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Warehouse Locations</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6 uppercase text-xs tracking-widest opacity-60">Contact</h5>
-                <ul class="flex flex-col gap-4 text-sm font-medium">
-                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">mail</span>
-                        info@shiporo.com</li>
-                    <li class="flex items-center gap-2"><span
-                            class="material-symbols-outlined text-primary">phone</span> (438) 880-5283</li>
-                    <li class="flex items-start gap-2"><span
-                            class="material-symbols-outlined text-primary">location_on</span> Montreal, Quebec, Canada
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                        info@shiporo.com
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">phone</span>
+                        (438) 880-5283
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        Montreal, Quebec, Canada
                     </li>
                 </ul>
             </div>
