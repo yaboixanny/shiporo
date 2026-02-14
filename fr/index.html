@@ -3,6 +3,16 @@
 <html class="light" lang="fr">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WX9SXWDK');</script>
+    <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCCTEFY0D"></script>
     <script>
@@ -182,7 +192,7 @@
                     <h3 class="text-2xl font-extrabold mb-2">Obtenir un devis personnalisé</h3>
                     <p class="text-navy-700 dark:text-gray-400 mb-6 text-sm">Parlez à un expert en logistique en moins
                         de 30 minutes.</p>
-                    <form class="flex flex-col gap-4">
+                    <form id="quote-form-element" class="flex flex-col gap-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-xs font-bold uppercase tracking-wider opacity-60">Nom</label>
@@ -274,6 +284,18 @@
                             notre <a href="#" class="underline">politique de confidentialité</a>.
                         </p>
                     </form>
+                </div>
+                <!-- Message de succès -->
+                <div id="thank-you-message"
+                    class="hidden bg-white dark:bg-navy-900 p-8 rounded-xl shadow-2xl border border-primary/20 text-center flex flex-col items-center gap-6">
+                    <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold mb-2">Merci !</h3>
+                        <p class="text-navy-700 dark:text-gray-400">Votre message a bien été reçu. Un expert en
+                            logistique vous contactera dans les 30 minutes.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -782,6 +804,24 @@
                     floatingCta.classList.remove('translate-y-0', 'opacity-100');
                 }
             });
+            // Form Submission Handling
+            const form = document.getElementById('quote-form-element');
+            const thankYou = document.getElementById('thank-you-message');
+            const formContainer = document.querySelector('#quote-form > h3').parentElement; // The white card
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // In a real scenario, you would send the data to your backend here
+
+                    // Show success state
+                    formContainer.classList.add('hidden');
+                    thankYou.classList.remove('hidden');
+
+                    // Scroll to message
+                    thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
         });
     </script>
     <a href="#quote-form" id="floating-cta"
