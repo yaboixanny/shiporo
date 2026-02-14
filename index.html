@@ -22,6 +22,22 @@
 
         gtag('config', 'G-SDCCTEFY0D');
     </script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16931860650/BI7xCI6Q4vgbEKrh3ok_',
+                'value': 1.0,
+                'currency': 'CAD',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Shiporo - 3PL Fulfillment Center Montreal</title>
@@ -121,7 +137,8 @@
                 </div>
             </div>
             <div class="flex items-center gap-4">
-                <a class="text-sm font-bold flex items-center gap-2" href="tel:1-438-880-5283">
+                <a class="text-sm font-bold flex items-center gap-2" href="tel:1-438-880-5283"
+                    onclick="return gtag_report_conversion('tel:1-438-880-5283');">
                     <span class="material-symbols-outlined text-primary text-xl">call</span>
                     <span class="hidden sm:inline">(438) 880-5283</span>
                 </a>
