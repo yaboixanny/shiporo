@@ -158,31 +158,32 @@
                     <h3 class="text-2xl font-extrabold mb-2">Get a Custom Quote</h3>
                     <p class="text-navy-700 dark:text-gray-400 mb-6 text-sm">Speak with a fulfillment expert within 30
                         minutes.</p>
-                    <form id="quote-form-element" class="flex flex-col gap-4">
+                    <form id="quote-form-element" name="quote-form-code" netlify class="flex flex-col gap-4">
+                        <input type="hidden" name="form-name" value="quote-form-code" />
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-xs font-bold uppercase tracking-wider opacity-60">Full Name</label>
                                 <input
                                     class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg h-12 px-4 focus:ring-2 focus:ring-primary transition-all"
-                                    placeholder="John Doe" type="text" />
+                                    placeholder="John Doe" type="text" name="name" />
                             </div>
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-xs font-bold uppercase tracking-wider opacity-60">Email
                                     Address</label>
                                 <input
                                     class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg h-12 px-4 focus:ring-2 focus:ring-primary transition-all"
-                                    placeholder="john@company.com" type="email" />
+                                    placeholder="john@company.com" type="email" name="email" />
                             </div>
                         </div>
                         <div class="flex flex-col gap-1.5">
                             <label class="text-xs font-bold uppercase tracking-wider opacity-60">Website URL</label>
                             <input
                                 class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg h-12 px-4 focus:ring-2 focus:ring-primary transition-all"
-                                placeholder="www.yourstore.com" type="text" />
+                                placeholder="www.yourstore.com" type="text" name="website" />
                         </div>
                         <div class="flex flex-col gap-1.5">
                             <label class="text-xs font-bold uppercase tracking-wider opacity-60">Monthly Orders</label>
-                            <select
+                            <select name="volume"
                                 class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg h-12 px-4 focus:ring-2 focus:ring-primary transition-all">
                                 <option>0 - 500</option>
                                 <option>500 - 2,500</option>
@@ -549,23 +550,33 @@
                     const container = form.closest('div.bg-white');
                     const parent = container.parentElement;
 
-                    // Hide form container
-                    container.classList.add('hidden');
+                    const formData = new FormData(form);
 
-                    // Create and show success message
-                    const success = document.createElement('div');
-                    success.className = 'bg-white dark:bg-navy-900 p-8 rounded-xl shadow-2xl border border-primary/20 text-center flex flex-col items-center gap-6';
-                    success.innerHTML = `
-                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-4xl">check_circle</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-extrabold mb-2">Thank You!</h3>
-                            <p class="text-navy-700 dark:text-gray-400">Your message has been received. A fulfillment expert will contact you within 30 minutes.</p>
-                        </div>
-                    `;
-                    parent.appendChild(success);
-                    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString(),
+                    })
+                        .then(() => {
+                            // Hide form container
+                            container.classList.add('hidden');
+
+                            // Create and show success message
+                            const success = document.createElement('div');
+                            success.className = 'bg-white dark:bg-navy-900 p-8 rounded-xl shadow-2xl border border-primary/20 text-center flex flex-col items-center gap-6';
+                            success.innerHTML = `
+                            <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-4xl">check_circle</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-extrabold mb-2">Thank You!</h3>
+                                <p class="text-navy-700 dark:text-gray-400">Your message has been received. A fulfillment expert will contact you within 30 minutes.</p>
+                            </div>
+                        `;
+                            parent.appendChild(success);
+                            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        })
+                        .catch((error) => console.error('Form submission error:', error));
                 });
             }
         });
